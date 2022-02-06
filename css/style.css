@@ -1,0 +1,1105 @@
+/* ##################### All Common CSS Start  ##################### */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+a {
+    margin: 0;
+    padding: 0;
+    line-height: 0.8;
+}
+
+:root {
+    --mainColor: #fec600;
+    --whiteColor: #fff;
+    --greyColor: #f1f1f1;
+}
+
+/* ##################### All Common CSS End  ##################### */
+
+/* #####################  Header CSS Start  #####################  */
+.navbar-toggler:focus {
+	box-shadow: none;
+}
+
+.bars span {
+    display: block;
+    width: 28px;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+    transition: all .3s linear;
+}
+.bars .bar2{
+	margin: 4px 0;
+}
+.navbar-bar .bars span.bar1{
+    transform: translateY(8px) rotate(-45deg);
+}
+.navbar-bar .bars span.bar2{
+    transform: rotate(45deg);
+}
+.navbar-bar .bars .bar3{
+    display: none;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: 1px solid #5c5330;
+    z-index: 99999;
+}
+
+.sticky_header {
+    background: rgba(0, 0, 0, 0.397);
+    animation: sticky_head 1s ease-out;
+}
+
+@keyframes sticky_head {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Raleway', sans-serif;
+    color: var(--whiteColor);
+    font-size: 16px;
+    line-height: 90px;
+    transition: .4s;
+    position: relative;
+}
+
+.navbar-light .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -1.5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--mainColor);
+    transition: .4s;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--mainColor);
+}
+
+.navbar-light .navbar-nav .nav-link:hover::after,
+.navbar-light .navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0 16px;
+}
+
+/* #####################  Header CSS End  #######################  */
+
+/* #####################  Banner CSS Start  #####################  */
+#banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.banner {
+    background: url(../images/banner.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    overflow: hidden;
+}
+.banner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+#banner i {
+    font-size: 22px;
+    width: 35px;
+    line-height: 35px;
+    background: rgb(255, 255, 255);
+    text-align: center;
+    color: #222222;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .4s;
+}
+
+#banner i:hover {
+    background: var(--mainColor);
+}
+
+.prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    z-index: 99999;
+}
+
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    z-index: 99999;
+}
+
+#banner .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.banner-text h2 {
+    color: var(--whiteColor);
+    font-size: 36px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+.main-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.banner-text h1 {
+    color: var(--mainColor);
+    font-size: 60px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    padding: 20px 0 27px;
+}
+
+.banner-text p {
+    color: var(--greyColor);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 55px;
+}
+
+.mybtn a.activecolor:hover,
+.mybtn a {
+    background: var(--mainColor);
+    padding: 20px;
+    display: inline-block;
+    margin: 0 10px;
+    color: #222222;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    border: 1px solid var(--mainColor);
+    transition: .4s;
+}
+
+.mybtn a.activecolor,
+.mybtn a:hover {
+    color: var(--whiteColor);
+    border: 1px solid var(--whiteColor);
+    background: transparent;
+}
+
+/* #####################  Banner CSS End  #######################  */
+
+/* #####################  About CSS Start  #####################  */
+.common-head h3 {
+    font-size: 36px;
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+    color: #111111;
+    padding-bottom: 30px;
+}
+.common-head p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #353535;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 34px;
+}
+.about-main {
+    padding-top: 55px;
+}
+.about-item {
+    background: #eeeeee;
+    padding: 35px 41px 40px 50px;
+    position: relative;
+    transition: .4s;
+}
+.about-item:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.about-item-2::after,
+.about-item-1::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 40px;
+    height: 40px;
+    background: #eeeeee;
+}
+
+.about-item h3 {
+    color: #111111;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 24px;
+}
+
+.about-item p {
+    color: #353535;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.about-item-2 {
+    padding: 40px 51px 36px;
+    /* margin-bottom: 60px; */
+}
+
+.about-item-2::after {
+    top: calc(100% - 20px);
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.middle-item {
+    margin: 50px 0;
+}
+
+.middle-item figure {
+    padding: 25px;
+    border: 1px solid #353535;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.fborder {
+    border: 1px solid var(--mainColor) !important;
+}
+
+.middle-item ul li {
+    background: var(--mainColor);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #353535;
+    transition: .4s;
+}
+
+.middle-item ul li:first-child {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.middle-item ul li:nth-child(2) {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.middle-item ul li:nth-child(3) {
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.middle-item ul li:nth-child(4) {
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bgcolor {
+    background: var(--mainColor) !important;
+}
+
+.about-item-3::after {
+    top: -20px;
+}
+
+.about-item-4::after {
+    right: 0;
+    left: -20px;
+}
+
+/* #####################  About CSS End  #######################  */
+
+/* #####################  Portfolio CSS Start  #####################  */
+#portfolio {
+    background: url(../images/portfolio.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    clip-path: polygon(0 8%, 100% 0, 100% 92%, 0% 100%);
+    position: relative;
+    z-index: 1;
+}
+#portfolio::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+#portfolio .common-head h3 {
+    color: #fff;
+}
+
+#portfolio .common-head p {
+    color: #f1f1f1;
+}
+
+.portfolio-main {
+    margin-top: 60px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+/* #####################  Portfolio CSS End  #######################  */
+
+/* #####################  Service CSS Start  #####################  */
+#service {
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.service-margin {
+    margin-bottom: 90px;
+}
+
+.service-main {
+    margin: 20px 0;
+    transform: scale(.8);
+    transition: .4s;
+}
+
+#service::after {
+    content: '';
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px dashed #353535;
+    height: 848px;
+    z-index: -1;
+}
+
+.service-main.slick-current {
+    transform: scale(1);
+}
+
+.ser-next,
+.ser-prev {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #222222;
+    color: #222222;
+    background: #fff;
+    cursor: pointer;
+    font-size: 23px;
+    transition: .4s;
+    z-index: 9;
+}
+
+.ser-next {
+    top: auto;
+    bottom: -18px;
+}
+
+.ser-next:hover,
+.ser-prev:hover {
+    background: var(--mainColor);
+    border: 1px solid var(--mainColor);
+}
+
+.service-main.slick-current .service-item p {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.service-item {
+    align-self: center;
+}
+
+.service-item h3 {
+    color: #111111;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.service-item figure {
+    background: #eeeeee;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.service-item figure:hover {
+    background: var(--mainColor);
+    transform: scale(1.2);
+}
+
+.service-main.slick-current .service-item figure {
+    transform: scale(1.5);
+    background: var(--mainColor);
+}
+
+.service-item p {
+    background: #eeeeee;
+    padding: 45px 52px 50px 45px;
+    display: inline-block;
+    color: #353535;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: -5px;
+    line-height: 24px;
+    position: relative;
+}
+
+.service-item p::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%) rotate(45deg);
+    width: 40px;
+    height: 40px;
+    background: #f1f1f1;
+}
+
+.service-item-2 p::after {
+    left: calc(100% - 20px);
+}
+
+/* #####################  Service CSS End  #######################  */
+
+/* #####################  Testimonials CSS Start  #####################  */
+#testimonials {
+    background: url(../images/testimonials.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 210px 0;
+    clip-path: polygon(0 12%, 100% 0, 100% 89%, 0% 100%);
+    position: relative;
+    z-index: 1;
+}
+#testimonials::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+.testi-item {
+    position: relative;
+    z-index: 1;
+}
+
+.testi-item::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 61px;
+    border-width: 1px;
+    border-color: #fff;
+    border-style: dashed;
+    height: 559px;
+    z-index: -1;
+    transform: translateY(-50%);
+}
+
+.testi-item figure {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #cccccc;
+    overflow: hidden;
+    margin: 25px 0;
+    transform: scale(1);
+    margin-left: 10px;
+}
+
+.testi-item .slick-current figure {
+    background: var(--mainColor) !important;
+    transform: scale(1.2);
+}
+
+.testi-item figure img {
+    width: 100%;
+    padding: 7px 16px 0 3px;
+}
+
+.testi-prev {
+    left: 62px;
+    top: -65px;
+    color: #222222;
+    background: #fff;
+    font-size: 23px;
+	padding-right: 30px;
+}
+
+.testi-next {
+    left: 62px;
+    bottom: -65px;
+    color: #222222;
+    background: #fff;
+    font-size: 23px;
+	padding-right: 30px;
+}
+.one-item .slick-arrow {
+    display: none !important;
+}
+
+.star-icon i {
+    color: var(--mainColor);
+    font-size: 14px;
+    display: inline-block;
+    margin: 5px 0 10px;
+}
+
+.testi-item-right {
+    padding: 60px 42px 60px 32px;
+    background: #f1f1f1;
+    position: relative;
+}
+.one-item{
+    position: relative;
+    z-index: 1;
+}
+.one-item::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -7px;
+    width: 40px;
+    height: 40px;
+    background: #f1f1f1;
+    transform: translateY(-50%) rotate(45deg);
+    z-index: -1;
+}
+
+.testi-item-right h3 {
+    color: #222222;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.testi-item-right h5 {
+    color: #353535;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    padding-bottom: 20px;
+}
+
+.testi-item-right p {
+    color: #353535;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.plan-main {
+    margin-top: 50px;
+}
+
+.plan-item {
+    background: #f1f1f1;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.plan-item:hover {
+    box-shadow: 0 5px 7px 2px rgba(0, 0, 0, 0.2);
+}
+
+.plan-item h3 {
+    padding: 30px 0;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    transition: .4s;
+}
+
+.plan-item h3::after {
+    position: absolute;
+    content: '';
+    top: -66px;
+    left: 0;
+    width: 100%;
+    height: 189px;
+    background: #353535;
+    transform: skewY(-7deg);
+    z-index: -1;
+    transition: .4s;
+}
+
+.plan-item:hover h3 {
+    color: #111111;
+}
+
+.plan-item .plan-ball {
+    width: 93px;
+    height: 93px;
+    border-radius: 50%;
+    background: #353535;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #fff;
+    outline: 1px solid #353535;
+    position: relative;
+    z-index: 99;
+    transition: .4s;
+}
+
+.plan-item .plan-ball {
+    outline: 1px solid var(--mainColor);
+}
+
+.plan-item .plan-ball h4 {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 29px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    transition: 0.4s;
+}
+
+.plan-item .plan-ball p {
+    color: var(--whiteColor);
+    font-size: 12px;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    transition: 0.4s;
+}
+
+.plan-item:hover .plan-ball h4,
+.plan-item:hover .plan-ball p {
+    color: #222222;
+}
+
+.plan-item ul li {
+    color: #353535;
+    font-size: 14px;
+    line-height: 40px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.plan-item h5 {
+    color: var(--whiteColor);
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    padding: 45px 0 26px;
+    transition: .4s;
+}
+
+.plan-item h5::after {
+    content: '';
+    position: absolute;
+    bottom: -31px;
+    left: 0;
+    width: 100%;
+    height: 107px;
+    background: #353535;
+    z-index: -1;
+    transform: skewY(-7deg);
+    transition: .4s;
+}
+
+.plan-item:hover h5 {
+    color: #222222;
+}
+
+.plan-item:hover .plan-ball,
+.plan-item:hover h5::after,
+.plan-item:hover h3::after {
+    background: var(--mainColor);
+}
+
+/* #####################  Testimonials CSS End  #######################  */
+
+/* #####################  Counter Up CSS Start  #####################  */
+#conter_up {
+    background: url(../images/couterup.png) no-repeat center center;
+    background-size: cover;
+    padding: 75px 0;
+    display: flex;
+    align-items: center;
+}
+
+#conter_up .container {
+    transform: skewY(-3deg);
+}
+
+.counter-item {
+    border: 1px solid #fff;
+    padding: 30px 0;
+}
+
+.counter-item h4 {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.counter-item h4 span {
+	margin-top: 20px;
+	display: inline-block;
+	font-size: 18px;
+	line-height: 24px;
+}
+/* 
+.counter-main .col-lg-2 {
+    flex-basis: 19.6%;
+} */
+
+/* #####################  Counter Up CSS End  #######################  */
+
+/* #####################  Team CSS Start  #####################  */
+.team-main {
+    margin-top: 55px;
+}
+
+.team-item {
+	overflow: hidden;
+	border: 1px solid #dddddd;
+	margin-bottom: 30px;
+}
+
+.team-img figure {
+    background: #f1f1f1;
+    position: relative;
+}
+
+.overly-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(254, 199, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+}
+
+.overly-team i {
+    color: #353535;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.team-item:hover .overly-team {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+.team-item-text {
+    position: relative;
+    z-index: 1;
+}
+.team-item-text::after {
+	content: '';
+	position: absolute;
+	top: -57px;
+	left: 0;
+	width: 100%;
+	padding-top: 98px;
+	transform: skewY(-7deg);
+	background: #fff;
+	z-index: -1;
+}
+.team-item-text h3 {
+    font-family: 'Raleway', sans-serif;
+    color: #111111;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.team-item-text h4 {
+    font-family: 'Raleway', sans-serif;
+    color: #222222;
+    font-weight: 400;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+.team-item-text .social-icon {
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -45px;
+    transition: .4s;
+}
+
+.team-item:hover .social-icon {
+    margin-top: 0;
+    padding-bottom: 25px;
+    opacity: 1;
+    visibility: visible;
+}
+.team-item-text i {
+	width: 35px;
+	line-height: 35px;
+	border: 1px solid #111111;
+	color: #111111;
+	text-align: center;
+	border-radius: 50%;
+	margin: 5px 10px;
+	transition: .4s;
+	cursor: pointer;
+}
+
+.team-item-text i:hover {
+    background: var(--mainColor);
+    border: 1px solid var(--mainColor);
+}
+
+/* #####################  Team CSS End  #######################  */
+
+/* #####################  Client CSS Start  #####################  */
+#client {
+    background: #f1f1f1;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    transform: skewY(-3deg);
+    margin-top: 60px;
+}
+
+#client .counter-item {
+    border: 1px solid #cccccc;
+    padding: 40px 30px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+#client .counter-item:hover {
+    border: 1px solid var(--mainColor);
+}
+
+/* #####################  Client CSS End  #######################  */
+
+/* #####################  Contact CSS Start  #####################  */
+.footer-logo {
+    background: #222222;
+    position: relative;
+    margin-top: 60px;
+    transform: skewY(-3deg);
+    top: -59px;
+    padding: 50px 0;
+    border-bottom: 2px solid #797979;
+    z-index: 9;
+}
+
+.footer-logo::before {
+    position: absolute;
+    content: '';
+    top: calc(100% + 1px);
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: #222222;
+    z-index: -1;
+}
+
+.footer-logo .logo {
+    transform: skewY(3deg);
+}
+
+.contact-item {
+	border-right: 1px solid #555555;
+	min-height: 170px;
+}
+.contact-item i {
+    color: #353535;
+    width: 35px;
+    line-height: 35px;
+    background: var(--mainColor);
+    border-radius: 50%;
+    margin-bottom: 18px;
+}
+
+.contact-main {
+    padding: 0 0 30px;
+    background: #222222;
+    position: relative;
+    z-index: 9;
+}
+
+.contact-item p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+.foollow-part {
+    text-align: center;
+}
+
+.foollow-part h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.foollow-part i {
+    color: #353535;
+    width: 40px;
+    font-size: 19px;
+    line-height: 40px;
+    text-align: center;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 15px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.foollow-part i:hover {
+    background: var(--mainColor);
+}
+
+/* #####################  Contact CSS End  #######################  */
+
+/* #####################  Footer CSS Start  #####################  */
+footer p {
+    padding: 23px 0 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background: #353535;
+}
+
+/* #####################  Footer CSS End  #######################  */
+
+#toTop i {
+    color: #fff;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    background: #cca000;
+    cursor: pointer;
+    z-index: 99999;
+    animation: topbtn linear 1.5s infinite;
+}
+@keyframes topbtn {
+    0%, 100%{
+        bottom: 30px;
+    }
+    50%{
+        bottom: 50px;
+    }
+}
